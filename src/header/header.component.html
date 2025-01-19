@@ -1,0 +1,25 @@
+<!-- <div class="header-container">
+    <img src="assets/logo.png" alt="Logo" class="header-logo"/>
+    <mat-toolbar style="background-color: #FFFFFF" class="toolbar-center">
+        <span>We Rock On</span>
+    </mat-toolbar>
+</div> -->
+
+<mat-sidenav-container class="mat-sidenav-container">
+    <mat-sidenav #sidenav mode="side" opened="false" class ="full-sidenav">
+        <mat-nav-list>
+            <mat-list-item routerLink="" (click)="sidenav.close()">Home</mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar style="background-color: #FFFFFF" class="header-toolbar">
+            <button mat-icon-button (click)="sidenav.toggle()" class="hamburger-btn">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <img src="assets/logo.png" alt="Logo" class="header-logo" />
+            <span class="toolbar-title">We Rock On</span>
+        </mat-toolbar>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

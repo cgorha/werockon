@@ -1,0 +1,56 @@
+* Make the container span the full browser height */
+.sidenav-container {
+    min-height: 100vh; /* or height: 100vh; */
+  }
+  
+  /* Force the sidenav to be a certain width, or let it fill if you prefer */
+  .full-sidenav {
+    width: 300px; /* Adjust as desired */
+    /* By default, it will stretch to full height inside mat-sidenav-container */
+  }
+  
+  /* Toolbar: white background, black text */
+  .header-toolbar {
+    background-color: #fff;
+    color: #000; /* ensures text is black */
+    display: flex; 
+    align-items: center; 
+  }
+  
+  /* Make the hamburger icon black */
+  .black-icon {
+    color: #000;
+  }
+  
+  /* Optional spacing for the hamburger icon */
+  .hamburger-btn {
+    margin-right: 8px;
+  }
+  
+  /* Logo styling */
+  .header-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 16px; /* space between logo and title */
+  }
+  
+  /* Title styling if you want some size/weight */
+  .toolbar-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Page content area to the right of the sidenav */
+  .page-content {
+    padding: 1rem;
+  }
+  
+  .app-content {
+    background-image: url('/assets/lake.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: center;
+}
