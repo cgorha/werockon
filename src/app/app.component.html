@@ -1,21 +1,19 @@
-<mat-sidenav-container class="mat-sidenav-container">
-    <mat-sidenav #sidenav mode="side" opened="false" class ="full-sidenav">
-        <mat-nav-list>
-            <mat-list-item routerLink="" (click)="sidenav.close()">Home</mat-list-item>
-        </mat-nav-list>
-    </mat-sidenav>
-
-    <mat-sidenav-content>
-        <mat-toolbar style="background-color: #FFFFFF" class="header-toolbar">
-            <button mat-icon-button (click)="sidenav.toggle()" class="hamburger-btn">
-                <mat-icon>menu</mat-icon>
-            </button>
-            <img src="assets/logo.png" alt="Logo" class="header-logo" />
-            <span class="toolbar-title">We Rock On</span>
-        </mat-toolbar>
-
-        <div class="app-content">
-            <router-outlet></router-outlet>
-        </div>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+<mat-toolbar class="header-toolbar">
+    <div class="top-row">
+      <img src="assets/logo.png" alt="Logo" class="header-logo" />
+      <span class="toolbar-title">We Rock On</span>
+    </div>
+  
+    <div class="nav-links">
+      <a routerLink="/" class="nav-link">Home</a>
+      <a routerLink="" class="nav-link">Our Process</a>
+      <a href="https://thesacredstones.com/" class="nav-link">Our Store</a>
+      <a routerLink="/contact" class="nav-link">Contact</a>
+    </div>
+  </mat-toolbar>
+  
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
+  
+  

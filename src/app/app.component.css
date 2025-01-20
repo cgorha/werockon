@@ -1,56 +1,105 @@
-* Make the container span the full browser height */
-.sidenav-container {
-    min-height: 100vh; /* or height: 100vh; */
+.header-toolbar {
+    /* Make background fully transparent */
+    background-color: transparent !important;  /* override default Material color */
+    box-shadow: none; /* remove default toolbar shadow if any */
+    border: none;     /* no border */
+    background: transparent;
+  
+    /* Normal document flow (not fixed) */
+    position: static; 
+
+  
+    /* Basic styling to center items or arrange them as you like */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    text-align: center;
+    color: #000; /* or #fff, depending on your background */
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  mat-toolbar {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  mat-toolbar::before,
+mat-toolbar::after {
+  content: none !important;
+  border: none !important;
+}
+
+::ng-deep mat-toolbar {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
   }
   
-  /* Force the sidenav to be a certain width, or let it fill if you prefer */
-  .full-sidenav {
-    width: 300px; /* Adjust as desired */
-    /* By default, it will stretch to full height inside mat-sidenav-container */
+  ::ng-deep mat-toolbar::before,
+  ::ng-deep mat-toolbar::after {
+    content: none !important;
+    border: none !important;
   }
   
-  /* Toolbar: white background, black text */
-  .header-toolbar {
-    background-color: #fff;
-    color: #000; /* ensures text is black */
-    display: flex; 
-    align-items: center; 
+  /* Row for logo + title */
+  .top-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; 
+    width: 100%;
+    background: transparent;
   }
   
-  /* Make the hamburger icon black */
-  .black-icon {
-    color: #000;
-  }
-  
-  /* Optional spacing for the hamburger icon */
-  .hamburger-btn {
-    margin-right: 8px;
-  }
-  
-  /* Logo styling */
+  /* The logo (transparent background behind it) */
   .header-logo {
+    background-color: transparent !important;
+    background: transparent;
     height: 40px;
     width: auto;
-    margin-right: 16px; /* space between logo and title */
   }
   
-  /* Title styling if you want some size/weight */
+  /* The title text */
   .toolbar-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
   }
   
-  /* Page content area to the right of the sidenav */
-  .page-content {
-    padding: 1rem;
+  /* Second row (nav links) */
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
   }
   
+  /* Link appearance */
+  .nav-link {
+    text-decoration: none;
+    color: inherit; /* use the toolbar's color (e.g., #000 or #fff) */
+    font-weight: 500;
+    background: transparent;
+  }
+  .nav-link:hover {
+    opacity: 0.7; /* simple hover effect */
+  }
+  
+  /* The main content area below the header */
   .app-content {
-    background-image: url('/assets/lake.jpg');
+  background: url('/assets/lake.jpg') center center / cover no-repeat;
+  min-height: 100vh;
     background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     background-repeat: no-repeat;
     background-position: center;
-}
+  
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* Add any padding or layout styles you need */
+  }
+  

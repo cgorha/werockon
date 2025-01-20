@@ -33,7 +33,6 @@ export class LandingPageComponent implements OnInit, OnDestroy{
       description: 'Short description for stone C...',
       image: 'assets/slide3.jpg'
     },
-    // add more items as needed
   ];
 
   currentIndex = 0;
