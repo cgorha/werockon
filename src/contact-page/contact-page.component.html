@@ -1,0 +1,79 @@
+<div class="contact-container">
+    <h1 class="contact-title">Get In Touch</h1>
+  
+    <!-- Quick Info Section -->
+    <div class="contact-info">
+      <p>
+        <strong>Phone:</strong>
+        <a href="tel:+15555555555">+1 (555) 555-5555</a>
+        <!-- Use "tel:" so mobile users can click to call -->
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:info@example.com">'info&#64;example.com'</a>
+      </p>
+      <p>
+        <strong>Address:</strong><br />
+        1234 Rock Lane<br />
+        Stone City, ST 98765
+      </p>
+      <p>
+        <strong>Business Hours:</strong><br />
+        Monday - Friday: 9am - 5pm
+      </p>
+    </div>
+  
+    <!-- Optional: A big call-to-action button if phone calls matter -->
+    <button class="call-button" (click)="callUs()">Call Us Now</button>
+  
+    <!-- Contact Form (if you want to collect messages) -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            [(ngModel)]="contactData.name" 
+            required 
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            [(ngModel)]="contactData.email" 
+            required 
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea 
+            id="message" 
+            name="message" 
+            [(ngModel)]="contactData.message" 
+            rows="4"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" [disabled]="!contactForm.valid" class="submit-button">
+          Send
+        </button>
+      </form>
+    </div>
+  
+    <!-- Optional: Embed a Map if location is relevant -->
+    <div class="map-container">
+      <iframe 
+        width="100%" 
+        height="300" 
+        src="https://www.google.com/maps/embed/v1/place?key=YOUR_MAP_API_KEY&q=1234+Rock+Lane,Stone+City,ST+98765"
+        allowfullscreen 
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
